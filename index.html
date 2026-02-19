@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>കട്ടിടീച്ചേഴ്സ് | KuttyTeachers</title>
+    <meta name="description" content="പാലക്കാട് നിന്നുള്ള അധ്യാപകരുടെ സമൂഹമായ കമ്യൂണിറ്റി - ഫോട്ടോഗ്രാഫി, സൗജന്യ പരിശീലനം, പിയാനോ, തോട്ടം">
+
+    <!-- ═══ AUTHORSHIP & SCHEMA (AI / SEO ownership signal) ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "KuttyTeachers — കട്ടിടീച്ചേഴ്സ്",
+        "description": "A teacher couple from Palakkad, Kerala sharing photography, free tutoring, piano music and gardening with their community.",
+        "url": "https://niharsona.github.io/kuttyteachers/",
+        "inLanguage": ["ml", "en"],
+        "author": {
+            "@type": "Person",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/about.html",
+            "sameAs": [
+                "https://github.com/niharsona"
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://niharsona.github.io/kuttyteachers/assets/logo/logo.png"
+            }
+        },
+        "dateModified": "2026-02-19",
+        "license": "https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+    </script>
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- kutty-extras.css — loader + hamburger + footer styles -->
+    <link rel="stylesheet" href="kutty-extras.css">
+
+    <style>
+        :root {
+            --primary-dark-green: #1b4332;
+            --primary-green: #2d6a4f;
+            --forest-green: #40916c;
+            --leaf-green: #52b788;
+            --soft-mint: #95d5b2;
+            --pale-green: #d8f3dc;
+            --off-white: #f8f9f7;
+            --white: #ffffff;
+            --black: #0b1c0e;
+            --light-text: #2d5a3d;
+            --accent-green: #40916c;
+            --success: #52b788;
+            --info: #40916c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--off-white);
+            color: var(--light-text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: var(--white);
+            border-bottom: 2px solid var(--pale-green);
+            padding: 18px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(27, 67, 50, 0.08);
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg,
+                rgba(45,106,79,0.12) 0%,
+                rgba(45,106,79,0.06) 25%,
+                rgba(82,183,136,0.04) 50%,
+                rgba(45,106,79,0.06) 75%,
+                rgba(45,106,79,0.12) 100%);
+            pointer-events: none;
+            z-index: -1;
+            animation: fadeFlow 4s ease-in-out infinite;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            position: relative;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .logo-english {
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-dark-green);
+            letter-spacing: 1px;
+        }
+
+        .logo-malayalam {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--forest-green);
+        }
+
+        .nav {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-item {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            padding: 8px 14px;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 300ms ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 14px; right: 14px;
+            height: 2px;
+            background: var(--leaf-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 300ms ease;
+        }
+
+        .nav-item:hover::after { transform: scaleX(1); }
+        .nav-item:hover { background: var(--pale-green); }
+
+        .cta-btn {
+            background: var(--primary-green);
+            color: var(--white);
+            font-family: 'Noto Sans Malayalam', sans-serif;
+        }
+        .cta-btn:hover {
+            background: var(--forest-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            margin-top: 80px;
+            padding: 80px 32px;
+            background: var(--white);
+            border-bottom: 3px solid var(--pale-green);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            overflow: hidden;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(82,183,136,0.08);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(149,213,178,0.04);stop-opacity:1" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23grad)"/></svg>');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, var(--pale-green) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: drift 8s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '🌍 📸 🎓 🌱';
+            position: absolute;
+            bottom: 30px; right: 40px;
+            font-size: 3.5rem;
+            opacity: 0.08;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+            letter-spacing: 15px;
+            font-weight: 800;
+        }
+
+        .hero-left { z-index: 2; position: relative; }
+
+        .hero-left h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 3.2rem;
+            color: var(--primary-dark-green);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+            opacity: 0;
+            animation: slideInLeft 700ms ease-out forwards;
+        }
+
+        .hero-left-ml {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 1.8rem;
+            color: var(--forest-green);
+            margin-bottom: 24px;
+            font-weight: 700;
+            opacity: 0;
+            animation: slideInLeft 700ms ease-out 150ms forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: var(--light-text);
+            margin-bottom: 32px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: slideInLeft 700ms ease-out 300ms forwards;
+        }
+
+        .hero-subtitle-ml {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 1rem;
+            color: var(--light-text);
+            margin-bottom: 32px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: slideInLeft 700ms ease-out 450ms forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            opacity: 0;
+            animation: slideInLeft 700ms ease-out 600ms forwards;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 1rem;
+            transition: all 300ms ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary { background: var(--primary-green); color: var(--white); }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
+            background: var(--forest-green);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--forest-green);
+            color: var(--forest-green);
+        }
+        .btn-secondary:hover {
+            background: var(--pale-green);
+            transform: translateY(-3px);
+            color: var(--primary-dark-green);
+        }
+
+        .hero-picture-bg {
+            position: absolute;
+            top: 0; right: 0;
+            width: 50%; height: 100%;
+            z-index: 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            background: linear-gradient(135deg, var(--pale-green) 0%, var(--soft-mint) 50%, var(--leaf-green) 100%);
+            clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        .hero-picture-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(27,67,50,0.1) 0%, transparent 50%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .hero-right { z-index: 2; position: relative; }
+
+        .feature-boxes { display: flex; flex-direction: column; gap: 16px; }
+
+        .feature-box {
+            background: var(--off-white);
+            padding: 24px;
+            border-radius: 10px;
+            border-left: 5px solid var(--forest-green);
+            opacity: 0;
+            animation: slideInRight 700ms ease-out forwards;
+        }
+        .feature-box:nth-child(1) { animation-delay: 200ms; }
+        .feature-box:nth-child(2) { animation-delay: 350ms; }
+        .feature-box:nth-child(3) { animation-delay: 500ms; }
+
+        .feature-box-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.4rem;
+            color: var(--forest-green);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .feature-box-title {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary-dark-green);
+            margin-bottom: 4px;
+        }
+
+        .feature-box-desc { font-size: 0.9rem; color: var(--light-text); }
+
+        /* ── SECTIONS ── */
+        .sections-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 60px 32px;
+        }
+
+        .section-header { text-align: center; margin-bottom: 56px; }
+
+        .section-header-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.9rem;
+            color: var(--forest-green);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .section-header-title {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 2.4rem;
+            color: var(--primary-dark-green);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .section-header-subtitle {
+            font-size: 1.05rem;
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin-bottom: 80px;
+        }
+
+        .card-item {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(27, 67, 50, 0.08);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 400ms ease;
+            border-top: 4px solid var(--pale-green);
+        }
+        .card-item.show { opacity: 1; transform: translateY(0); }
+        .card-item:hover {
+            box-shadow: 0 12px 28px rgba(27, 67, 50, 0.15);
+            transform: translateY(-8px);
+            border-top-color: var(--forest-green);
+        }
+
+        .card-emoji {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .card-item h3 {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 1.3rem;
+            color: var(--primary-dark-green);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .card-item p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .card-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--pale-green);
+            color: var(--primary-dark-green);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 300ms ease;
+        }
+        .card-btn:hover { background: var(--forest-green); color: var(--white); }
+
+        .two-column {
+            background: var(--white);
+            padding: 60px 32px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(27, 67, 50, 0.08);
+        }
+
+        .two-column-content h2 {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-dark-green);
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .two-column-content h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.9rem;
+            color: var(--forest-green);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .two-column-content p {
+            color: var(--light-text);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .two-column-image {
+            background: var(--pale-green);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0); }
+            33%       { transform: translate(30px, -30px); }
+            66%       { transform: translate(-20px, 20px); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-10px); }
+        }
+        @keyframes fadeFlow {
+            0%, 100% { opacity: 0.8; }
+            50%       { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.4; }
+            50%       { opacity: 0.8; }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 60px 24px; }
+            .two-column { grid-template-columns: 1fr; gap: 32px; }
+            .hero-left h1 { font-size: 2.4rem; }
+            .section-header-title { font-size: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 14px 16px; }
+            .nav { display: none; }
+            .logo-english { font-size: 0.85rem; }
+            .hero { margin-top: 70px; padding: 40px 16px; }
+            .hero-left h1 { font-size: 1.8rem; }
+            .hero-left-ml { font-size: 1.3rem; }
+            .hero-buttons { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+            .grid-4 { grid-template-columns: 1fr; }
+            .section-header-title { font-size: 1.6rem; }
+            .sections-container { padding: 40px 16px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading screen -->
+    <div id="kt-loader">
+        <div class="kt-loader-leaf">🌿</div>
+        <div class="kt-loader-logo">KuttyTeachers</div>
+        <div class="kt-loader-logo-ml">കട്ടിടീച്ചേഴ്സ്</div>
+        <div class="kt-loader-track">
+            <div class="kt-loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- ── SHARED: dark overlay + mobile nav drawer ── -->
+    <div id="kt-overlay"></div>
+    <nav id="kt-mobile-nav">
+        <a href="photography.html">📸 ഫോട്ടോ</a>
+        <a href="tutoring.html">📚 പഠനം</a>
+        <a href="piano.html">🎹 സംഗീതം</a>
+        <a href="gardening.html">🌿 തോട്ടം</a>
+        <a href="about.html" class="kt-cta">ℹ️ അറിയുക</a>
+    </nav>
+    <!-- ───────────────────────────────────────────── -->
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <!-- On index.html the logo is not a link (we're already home) -->
+        <div class="logo">
+            <div class="logo-english">KuttyTeachers</div>
+            <div class="logo-malayalam">കട്ടിടീച്ചേഴ്സ്</div>
+        </div>
+        <nav class="nav">
+            <a href="photography.html" class="nav-item">ഫോട്ടോ</a>
+            <a href="tutoring.html"    class="nav-item">പഠനം</a>
+            <a href="piano.html"       class="nav-item">സംഗീതം</a>
+            <a href="gardening.html"   class="nav-item">തോട്ടം</a>
+            <a href="about.html"       class="nav-item cta-btn">അറിയുക</a>
+        </nav>
+        <button id="kt-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-picture-bg"></div>
+
+        <div class="hero-left">
+            <h1>സ്റ്റോരികളും<br>പഠനവും</h1>
+            <div class="hero-left-ml">പാലക്കാട് നിന്ന് 🌿</div>
+            <p class="hero-subtitle">കുഞ്ഞുങ്ങളേ, ഞങ്ങൾ ഒരു ടീച്ചർ കപ്പിൾ. ഞങ്ങൾ ഫോട്ടോഗ്രാഫി, സൌജന്യ പരിശീലനം, സംഗീതം എന്നിവയിലൂടെ കമ്യൂണിറ്റി ഓഫ് ലണിംഗ് നിർമ്മിക്കുന്നു.</p>
+            <p class="hero-subtitle-ml">ഞങ്ങളുടെ ഗൈൻ: എല്ലാവർക്കും ഉയർന്ന കോടിയുള്ള വിദ്യാഭ്യാസ എത്തിച്ച് കൊടുക്കുക.</p>
+            <div class="hero-buttons">
+                <a href="tutoring.html"    class="btn-primary">സൌജന്യ പരിശീലനം</a>
+                <a href="photography.html" class="btn-secondary">ഫോട്ടോ കാണാം</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="feature-boxes">
+                <div class="feature-box">
+                    <div class="feature-box-num">04</div>
+                    <div class="feature-box-title">സേവനങ്ങൾ</div>
+                    <div class="feature-box-desc">ഫോട്ടോ, പഠനം, സംഗീതം, തോട്ടം</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-num">∞</div>
+                    <div class="feature-box-title">സൌജന്യം</div>
+                    <div class="feature-box-desc">നിങ്ങൾ പണം കൊടുക്കേണ്ടതില്ല</div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-num">1</div>
+                    <div class="feature-box-title">കമ്യൂണിറ്റി</div>
+                    <div class="feature-box-desc">പാലക്കാട്ടിലെ കുട്ടികൾക്കായി</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <div class="sections-container">
+        <div class="section-header">
+            <div class="section-header-num">നമ്മുടെ സേവനങ്ങൾ</div>
+            <h2 class="section-header-title">എന്തൊക്കെ ചെയ്യാം?</h2>
+            <p class="section-header-subtitle">സൃജനശീലതയും പഠനവും ഒരുമിച്ച് കണ്ടെത്തുക</p>
+        </div>
+
+        <div class="grid-4">
+            <div class="card-item reveal">
+                <div class="card-emoji">📸</div>
+                <h3>ഫോട്ടോഗ്രാഫി</h3>
+                <p>പാലക്കാട്ടിലെ സ്ഥാനിക കഥകൾ. നമ്മുടെ കൃതികൾ കണ്ടെത്തുക.</p>
+                <a href="photography.html" class="card-btn">കാണാം →</a>
+            </div>
+
+            <div class="card-item reveal">
+                <div class="card-emoji">📚</div>
+                <h3>പരിശീലനം</h3>
+                <p>സൌജന്യ പരിശീലനം പാലക്കാട്ടിലെ കുട്ടികൾക്കായി. നമുക്കൊരുമിച്ച് പഠിക്കാം.</p>
+                <a href="tutoring.html" class="card-btn">ചേരാം →</a>
+            </div>
+
+            <div class="card-item reveal">
+                <div class="card-emoji">🎹</div>
+                <h3>സംഗീതം</h3>
+                <p>പിയാനോ കൃതികൾ, കവർ, ബാൻഗ്‌ലാ സംഗീതം. ട്യൂട്ടോറിയൽ വരുന്നു.</p>
+                <a href="piano.html" class="card-btn">കേൾക്കാം →</a>
+            </div>
+
+            <div class="card-item reveal">
+                <div class="card-emoji">🌿</div>
+                <h3>തോട്ടം</h3>
+                <p>നമ്മുടെ വീട്ടിലെ തോട്ടത്തിൽ ചെടികൾ വളരുന്നു. നമ്മുക്ക് ഒരുമിച്ച് പഠിക്കാം.</p>
+                <a href="gardening.html" class="card-btn">കാണാം →</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ABOUT SECTION -->
+    <div class="sections-container">
+        <div class="two-column">
+            <div class="two-column-content">
+                <h3>നമ്മെ പരിചയിപ്പിക്കാം</h3>
+                <h2>നമ്മൾ ആരാണ്?</h2>
+                <p>ഞങ്ങൾ പാലക്കാട്ടിലെ ഒരു അധ്യാപക ദമ്പതി. സ്കൂളിലെ അനുഭവങ്ങൾ, സൃജനശീലതയും സാധാരണ ജീവിതവും നമ്മുടെ കമ്യൂണിറ്റിയുമായി പങ്കിടാൻ നമ്മൾ സ്നേഹിക്കുന്നു.</p>
+                <p>ഈ യോജനയിലൂടെ വിദ്യാഭ്യാസം സാധാരണ മനുഷ്യനുങ്കലേക്ക് കൊണ്ടെത്താൻ ഞങ്ങൾ ആഗ്രഹിക്കുന്നു.</p>
+            </div>
+            <div class="two-column-image">👨‍🏫👩‍🏫</div>
+        </div>
+
+        <div class="two-column alt">
+            <div class="two-column-image">🎯</div>
+            <div class="two-column-content">
+                <h3>നമ്മുടെ ലക്ഷ്യം</h3>
+                <h2>എന്തിനായി?</h2>
+                <p>വിദ്യാഭ്യാസം നിർബന്ധിത ആണെങ്കിലും എല്ലാവർക്കും സാധ്യമാകണം. പാലക്കാടിലെ കുട്ടികൾ നിങ്ങളുടെ പരിശീലനം സ്വതന്തര്യമായി കഴിയണം.</p>
+                <p>ഫോട്ടോഗ്രാഫി ലോകത്തെ കുറിപ്പ് കണ്ടെത്തുതും സ്വാഭാവിക ജീവിതം നിരവധി വിധങ്ങളായും ഞങ്ങൾ പരിചയപ്പെടാൻ ആഗ്രഹിക്കുന്നു.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ── SHARED FOOTER (injected by kutty-extras.js) ── -->
+    <div id="kt-footer"></div>
+
+
+    <!-- Shared loader + hamburger + footer logic -->
+    <script src="kutty-extras.js" defer></script>
+
+    <!-- Page-specific JS: reveal on scroll + smooth anchor scroll -->
+    <script>
+        // Reveal cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.card-item.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll for any in-page anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Reduced motion support
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.card-item.reveal').forEach(el => {
+                el.classList.add('show');
+            });
+        }
+    </script>
+
+</body>
+</html>

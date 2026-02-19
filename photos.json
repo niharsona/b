@@ -1,0 +1,133 @@
+{
+  "_comment": "KuttyTeachers — photos.json | © 2026 KuttyTeachers, Palakkad, Kerala. To add a video to any photo: paste a YouTube URL or local file path (e.g. assets/videos/morning-light.mp4) in the 'video' field.",
+  "albums": [
+    {
+      "id": "june-2026",
+      "month": "ജൂൺ",
+      "year": "2026",
+      "theme": "പ്രഭാതക്കാഴ്ചകൾ",
+      "theme_en": "Morning Views",
+      "location": "പാലക്കാട്",
+      "cover": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+      "photos": [
+        {
+          "id": "jun26-01",
+          "src": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=90",
+          "thumb": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80",
+          "title": "കാലത്തെ കാഴ്ച",
+          "title_en": "Morning Light",
+          "description": "പ്രാതഃ കാലത്ത് അടുത്തുള്ള വയലുകളിലൂടെ നടന്നതിനെ ആ നിമിഷം ക്യാപ്ചർ ചെയ്യുന്നു. മൃദുവായ പ്രകാശവും ശാന്തമായ പരിസരവും സ്ഥാനത്തെ ശാന്തമായ ഭാവം സൃഷ്ടിച്ചു. ആ നിമിഷം മറക്കാനാകാത്തതായിരുന്നു.",
+          "camera": "Canon EOS 1500D",
+          "lens": "18-55mm kit lens",
+          "settings": {
+            "iso": "ISO 200",
+            "aperture": "f/4.5",
+            "shutter": "1/320s",
+            "focal_length": "35mm"
+          },
+          "composition": ["Rule of Thirds", "Golden Hour Light", "Foreground Interest"],
+          "tags": ["morning", "fields", "light"],
+          "video": ""
+        },
+        {
+          "id": "jun26-02",
+          "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=90",
+          "thumb": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80",
+          "title": "മരങ്ങളിലൂടെയുള്ള പാത",
+          "title_en": "Path Through Trees",
+          "description": "മരങ്ങൾ ചുറ്റിയ ഒരു ശാന്തമായ പാത. ഈ സ്ഥലം പ്രാദേശിക നടന്നവരും കർഷകരും ഉപയോഗിക്കുന്നു. പ്രകൃതിയുടെ ഫ്രെയിമിംഗ് ഈ നിമിഷത്തെ പ്രത്യേകമാക്കി. ഇടുങ്ങിയ പാതയും ആകാശത്തേക്ക് നീളുന്ന മരങ്ങളും ഒരു സ്വാഭാവിക ടണൽ ഉണ്ടാക്കി.",
+          "camera": "Canon EOS 1500D",
+          "lens": "18-55mm kit lens",
+          "settings": {
+            "iso": "ISO 400",
+            "aperture": "f/5.6",
+            "shutter": "1/200s",
+            "focal_length": "24mm"
+          },
+          "composition": ["Leading Lines", "Natural Frame", "Symmetry", "Depth of Field"],
+          "tags": ["trees", "path", "nature", "forest"],
+          "video": ""
+        }
+      ]
+    },
+    {
+      "id": "may-2026",
+      "month": "മേയ്",
+      "year": "2026",
+      "theme": "ആകാശവും ഭൂമിയും",
+      "theme_en": "Sky and Earth",
+      "location": "പാലക്കാട്",
+      "cover": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
+      "photos": [
+        {
+          "id": "may26-01",
+          "src": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=90",
+          "thumb": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80",
+          "title": "സായാഹ്നത്തെ ആകാശം",
+          "title_en": "Evening Sky",
+          "description": "ആ വൈകുന്നേരത്ത് ആകാശം വേഗത്തിൽ നിറങ്ങൾ മാറി. ഞാൻ ഗ്രേഡിയന്ട് ക്യാപ്ചർ ചെയ്യാൻ നിന്നു. ഫോട്ടോഗ്രാഫി ഈ ഹ്രസ്വ നിമിഷങ്ങൾ നിരന്തരം സംരക്ഷിക്കാൻ സഹായിക്കുന്നു. സൂര്യൻ അസ്തമിക്കുന്നതിന് മുൻപുള്ള ആ 10 മിനിറ്റ് ഒരു ഫോട്ടോഗ്രാഫർക്ക് സ്വർഗ്ഗം പോലെ.",
+          "camera": "Canon EOS 1500D",
+          "lens": "18-55mm kit lens",
+          "settings": {
+            "iso": "ISO 100",
+            "aperture": "f/8",
+            "shutter": "1/60s",
+            "focal_length": "18mm"
+          },
+          "composition": ["Horizon Line", "Negative Space", "Color Contrast", "Wide Angle"],
+          "tags": ["sky", "sunset", "colors", "evening"],
+          "video": ""
+        },
+        {
+          "id": "may26-02",
+          "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=90",
+          "thumb": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+          "title": "വിളഭൂമിയുടെ സൌന്ദര്യം",
+          "title_en": "Beauty of the Fields",
+          "description": "വെയിലിന്റെ സോണൽ വിളഭൂമിയിൽ പ്രതിഫലിക്കുന്നത് കാണുക. കർഷകർ ദിവസം മുഴുവൻ അധ്വാനിച്ചതിന്റെ ഫലം ഈ ഭൂമിയിൽ കാണാം. ഒരു ടീച്ചർ എന്ന നിലയ്ക്ക്, ഈ കർഷകരിൽ നിന്ന് ഞാൻ ഒരുപാട് പഠിച്ചിട്ടുണ്ട്.",
+          "camera": "Canon EOS 1500D",
+          "lens": "18-55mm kit lens",
+          "settings": {
+            "iso": "ISO 200",
+            "aperture": "f/6.3",
+            "shutter": "1/250s",
+            "focal_length": "40mm"
+          },
+          "composition": ["Rule of Thirds", "Diagonal Lines", "Texture", "Natural Light"],
+          "tags": ["fields", "agriculture", "landscape", "light"],
+          "video": ""
+        }
+      ]
+    },
+    {
+      "id": "april-2026",
+      "month": "ഏപ്രിൽ",
+      "year": "2026",
+      "theme": "തെരുവ് കഥകൾ",
+      "theme_en": "Street Stories",
+      "location": "പാലക്കാട്",
+      "cover": "https://images.unsplash.com/photo-1495608129675-fdf090ba3e41?auto=format&fit=crop&w=800&q=80",
+      "photos": [
+        {
+          "id": "apr26-01",
+          "src": "https://images.unsplash.com/photo-1495608129675-fdf090ba3e41?auto=format&fit=crop&w=1200&q=90",
+          "thumb": "https://images.unsplash.com/photo-1495608129675-fdf090ba3e41?auto=format&fit=crop&w=600&q=80",
+          "title": "പ്രാദേശിക ജീവിതം",
+          "title_en": "Local Life",
+          "description": "സാധാരണ നാളിൽ പാലക്കാടിലെ തെരുവുകളിൽ എന്താണ് നടന്നുകൊണ്ടിരിക്കുന്നതെന്ന് കാണുക. മനുഷ്യരും സമൂഹവും ജീവിതവും ഈ ഫ്രെയിമിൽ ഉണ്ട്. ഞാൻ ഒരു ടീച്ചർ ആണ്, പക്ഷേ ഇത്തരം ഫോട്ടോകൾ എടുക്കുമ്പോൾ ഞാൻ ഒരു വിദ്യാർത്ഥി ആകുന്നു.",
+          "camera": "Canon EOS 1500D",
+          "lens": "50mm f/1.8 (Nifty Fifty)",
+          "settings": {
+            "iso": "ISO 800",
+            "aperture": "f/1.8",
+            "shutter": "1/1000s",
+            "focal_length": "50mm"
+          },
+          "composition": ["Candid Moment", "Environmental Portrait", "Available Light", "Shallow DOF"],
+          "tags": ["street", "people", "life", "candid"],
+          "video": ""
+        }
+      ]
+    }
+  ]
+}

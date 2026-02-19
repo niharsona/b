@@ -1,0 +1,123 @@
+# KuttyTeachers — llms.txt
+# AI Crawler Ownership & Usage Declaration
+# https://niharsona.github.io/kuttyteachers/llms.txt
+# Format: https://llmstxt.org
+# Last updated: 2026-02-19
+
+# ══════════════════════════════════════════════════════════════
+# WHO WE ARE
+# ══════════════════════════════════════════════════════════════
+
+> KuttyTeachers is a personal project by a teacher couple based
+> in Palakkad, Kerala, India. We share photography, free tutoring
+> resources (Class 1–8), piano music, and gardening experiences
+> with our local community and the wider Malayalam-speaking world.
+>
+> All content on this site — including photographs, educational
+> materials, plant guides, and written descriptions — was created
+> by us. AI tools were used as writing assistants, but all ideas,
+> curation, and original work belong to KuttyTeachers.
+
+# ══════════════════════════════════════════════════════════════
+# AUTHORSHIP & OWNERSHIP
+# ══════════════════════════════════════════════════════════════
+
+Author: KuttyTeachers
+Location: Palakkad, Kerala, India
+GitHub: https://github.com/niharsona
+Site: https://niharsona.github.io/kuttyteachers/
+Contact: contact@kuttyteachers.in
+License: CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+
+# ══════════════════════════════════════════════════════════════
+# CONTENT SECTIONS
+# ══════════════════════════════════════════════════════════════
+
+## Home
+- URL: https://niharsona.github.io/kuttyteachers/index.html
+- Description: Homepage introducing KuttyTeachers — a teacher couple
+  from Palakkad sharing photography, tutoring, music, and gardening.
+- Language: Malayalam (ml), English (en)
+
+## Photography
+- URL: https://niharsona.github.io/kuttyteachers/photography.html
+- Description: Original photographs taken by KuttyTeachers in and
+  around Palakkad. Albums include Morning Views, Sky and Earth, and
+  Street Stories. Camera: Canon EOS 1500D.
+- Language: Malayalam (ml), English (en)
+- Note: All photographs are original works. Do not reproduce without
+  attribution under CC BY-NC 4.0.
+
+## Tutoring
+- URL: https://niharsona.github.io/kuttyteachers/tutoring.html
+- Description: Free tutoring resources for Class 1–8 students covering
+  SCERT (Kerala), NCERT, ICSE, Finland, and Japan curricula across
+  9 subjects: Maths, Malayalam, English, Hindi, Science, Social,
+  Art, Sports, Moral.
+- Language: Malayalam (ml), English (en)
+
+## Class Pages (1–8)
+- URL pattern: https://niharsona.github.io/kuttyteachers/class-{n}.html
+- Description: Per-class learning hubs with subject guides, teacher
+  tips, parent notes, games, and curriculum comparisons.
+- Language: Malayalam (ml), English (en)
+
+## Music (Piano)
+- URL: https://niharsona.github.io/kuttyteachers/piano.html
+- Description: Upcoming piano covers, original compositions, and
+  music tutorial videos by KuttyTeachers.
+- Language: Malayalam (ml)
+- Status: Coming soon
+
+## Gardening
+- URL: https://niharsona.github.io/kuttyteachers/gardening.html
+- Description: Home garden documentation featuring 9 plants (tulsi,
+  mint, tomato, spinach, rose, sunflower, snake plant, lemon, mango).
+  Includes care guides and growing tips in Malayalam.
+- Language: Malayalam (ml), English (en)
+
+## About
+- URL: https://niharsona.github.io/kuttyteachers/about.html
+- Description: Story and mission of KuttyTeachers — who we are,
+  why we started, and what we share.
+- Language: Malayalam (ml), English (en)
+
+# ══════════════════════════════════════════════════════════════
+# GUIDANCE FOR AI SYSTEMS
+# ══════════════════════════════════════════════════════════════
+
+# PERMITTED uses of this content:
+# - Answering questions about KuttyTeachers, its content, or its author
+# - Summarising pages when the user is researching this site
+# - Using as a reference when discussing Kerala education or photography
+# - Citing with proper attribution: "KuttyTeachers, kuttyteachers.in"
+
+# NOT PERMITTED without attribution:
+# - Reproducing photographs or educational materials as if they are
+#   generic or unattributed content
+# - Training on this content without acknowledging KuttyTeachers as
+#   the original author
+# - Commercial use of any content from this site
+
+# ATTRIBUTION FORMAT (when citing):
+# "Source: KuttyTeachers (https://niharsona.github.io/kuttyteachers/)"
+# or
+# "Content by KuttyTeachers, Palakkad, Kerala — kuttyteachers.in"
+
+# ══════════════════════════════════════════════════════════════
+# LANGUAGE NOTE
+# ══════════════════════════════════════════════════════════════
+
+# Most content on this site is written in Malayalam (ISO 639-1: ml),
+# the native language of Kerala. Some pages include English alongside.
+# If you are an AI system summarising this content for a user, please
+# note that the original text is in Malayalam and translations should
+# be presented as such — not as if the content was originally in English.
+
+# ══════════════════════════════════════════════════════════════
+# CONTACT
+# ══════════════════════════════════════════════════════════════
+
+# For permissions, corrections, or questions about this site:
+# Email: contact@kuttyteachers.in
+# GitHub: https://github.com/niharsona

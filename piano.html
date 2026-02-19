@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>കട്ടിടീച്ചേഴ്സ് സംഗീതം | Coming Soon</title>
+    <meta name="description" content="സംഗീത സൃഷ്ടി നിർമ്മാണത്തിലുണ്ട് - പിയാനോ കവറുകൾ, ട്യൂട്ടോറിയലുകൾ വരുന്നതായി">
+
+    <!-- ═══ AUTHORSHIP & SCHEMA (AI / SEO ownership signal) ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "KuttyTeachers Music — പിയാനോ സംഗീതം",
+        "description": "Piano covers, original compositions and music tutorials coming soon from KuttyTeachers, Palakkad, Kerala.",
+        "url": "https://niharsona.github.io/kuttyteachers/piano.html",
+        "inLanguage": ["ml", "en"],
+        "author": {
+            "@type": "Person",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/about.html",
+            "sameAs": [
+                "https://github.com/niharsona"
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://niharsona.github.io/kuttyteachers/assets/logo/logo.png"
+            }
+        },
+        "dateModified": "2026-02-19",
+        "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/"
+        }
+    }
+    </script>
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Shared: hamburger + mobile nav + footer styles -->
+    <link rel="stylesheet" href="kutty-extras.css">
+
+    <style>
+        :root {
+            --primary-dark-green: #1b4332;
+            --primary-green: #2d6a4f;
+            --forest-green: #40916c;
+            --leaf-green: #52b788;
+            --soft-mint: #95d5b2;
+            --pale-green: #d8f3dc;
+            --off-white: #f8f9f7;
+            --white: #ffffff;
+            --black: #0b1c0e;
+            --light-text: #2d5a3d;
+            --accent-green: #40916c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--off-white);
+            color: var(--light-text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: var(--white);
+            border-bottom: 2px solid var(--pale-green);
+            padding: 18px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(27, 67, 50, 0.08);
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                rgba(45,106,79,0.12) 0%,
+                rgba(45,106,79,0.06) 25%,
+                rgba(82,183,136,0.04) 50%,
+                rgba(45,106,79,0.06) 75%,
+                rgba(45,106,79,0.12) 100%);
+            pointer-events: none;
+            z-index: -1;
+            animation: fadeFlow 4s ease-in-out infinite;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            text-decoration: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-english {
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-dark-green);
+            letter-spacing: 1px;
+        }
+
+        .logo-malayalam {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--forest-green);
+        }
+
+        .nav {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-item {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            padding: 8px 14px;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 300ms ease;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 14px; right: 14px;
+            height: 2px;
+            background: var(--leaf-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 300ms ease;
+        }
+
+        .nav-item:hover::after { transform: scaleX(1); }
+        .nav-item:hover { background: var(--pale-green); }
+
+        .nav-item.active {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        .nav-item.active::after { display: none; }
+
+        /* ── MAIN CONTENT ── */
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 80px;
+            padding: 40px 32px;
+        }
+
+        .coming-soon-content {
+            text-align: center;
+            max-width: 700px;
+            animation: fadeIn 800ms ease-out;
+        }
+
+        .emoji-large {
+            font-size: 6rem;
+            margin-bottom: 30px;
+            animation: float 4s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 3rem;
+            color: var(--primary-dark-green);
+            margin-bottom: 16px;
+            font-weight: 800;
+            animation: slideInDown 700ms ease-out;
+        }
+
+        .subtitle {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            font-size: 1.8rem;
+            color: var(--forest-green);
+            margin-bottom: 24px;
+            font-weight: 700;
+            animation: slideInDown 700ms ease-out 100ms backwards;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            animation: slideInDown 700ms ease-out 200ms backwards;
+        }
+
+        .timeline {
+            background: linear-gradient(135deg, var(--pale-green) 0%, var(--soft-mint) 100%);
+            padding: 32px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            animation: slideInDown 700ms ease-out 300ms backwards;
+        }
+
+        .timeline h3 {
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            color: var(--primary-dark-green);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-dot {
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            background: var(--forest-green);
+            border-radius: 50%;
+            margin-top: 4px;
+        }
+
+        .timeline-text {
+            color: var(--primary-dark-green);
+            font-weight: 500;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInDown 700ms ease-out 400ms backwards;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 300ms ease;
+            font-family: 'Noto Sans Malayalam', sans-serif;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--forest-green);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--pale-green);
+            color: var(--primary-dark-green);
+            border: 2px solid var(--forest-green);
+        }
+        .btn-secondary:hover {
+            background: var(--soft-mint);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(82, 183, 136, 0.2);
+        }
+
+        .emoji-line {
+            font-size: 2rem;
+            margin-top: 40px;
+            letter-spacing: 12px;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-15px); }
+        }
+        @keyframes fadeFlow {
+            0%, 100% { opacity: 0.8; }
+            50%       { opacity: 1; }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .header { padding: 14px 16px; }
+            .nav { display: none; }
+            .logo-english { font-size: 0.85rem; }
+            .container { padding: 30px 16px; }
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1.3rem; }
+            .description { font-size: 1rem; }
+            .emoji-large { font-size: 4rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+            .timeline { padding: 24px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── SHARED: dark overlay + mobile nav drawer ── -->
+    <div id="kt-overlay"></div>
+    <nav id="kt-mobile-nav">
+        <a href="index.html">🏠 വീട്</a>
+        <a href="photography.html">📸 ഫോട്ടോ</a>
+        <a href="tutoring.html">📚 പഠനം</a>
+        <a href="piano.html">🎹 സംഗീതം</a>
+        <a href="gardening.html">🌿 തോട്ടം</a>
+        <a href="about.html" class="kt-cta">ℹ️ അറിയുക</a>
+    </nav>
+    <!-- ───────────────────────────────────────────── -->
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <div class="logo-english">KuttyTeachers</div>
+            <div class="logo-malayalam">കട്ടിടീച്ചേഴ്സ്</div>
+        </a>
+        <nav class="nav">
+            <a href="index.html"       class="nav-item">വീട്</a>
+            <a href="photography.html" class="nav-item">ഫോട്ടോ</a>
+            <a href="tutoring.html"    class="nav-item">പഠനം</a>
+            <a href="piano.html"       class="nav-item active">സംഗീതം</a>
+            <a href="gardening.html"   class="nav-item">തോട്ടം</a>
+            <a href="about.html"       class="nav-item">അറിയുക</a>
+        </nav>
+        <!-- Hamburger — kutty-extras.css shows this only on mobile -->
+        <button id="kt-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="coming-soon-content">
+            <div class="emoji-large">🎹</div>
+            <h1>വരുന്നതായി</h1>
+            <div class="subtitle">പിയാനോ സംഗീതം നിർമ്മാണത്തിലുണ്ട്</div>
+
+            <p class="description">
+                ഞങ്ങൾ നിങ്ങൾക്കായി പിയാനോ കവറുകൾ, സ്വതന്ത്ര സൃഷ്ടികൾ, സംഗീത പരിശീലന വിഡിയോകൾ തയാറാക്കുകയാണ്. നമ്മുടെ സംഗീത സാത്തരത്ത് കൂടിച്ചേർന്ന് കാത്തിരിക്കുക! 🎵
+            </p>
+
+            <div class="timeline">
+                <h3>ആസന്നമായ സംഗീത പ്രകാശനം 📅</h3>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">ജനുവരി-ഫെബ്രുവരി 2026: ആദ്യ പിയാനോ കവർ റെക്കോർഡിംഗ്</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">മാർച്ച് 2026: സംഗീത പരിശീലന വിഡിയോ വരാനിരിക്കുന്നു</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">ഏപ്രിൽ 2026: സ്വതന്ത്ര പിയാനോ സൃഷ്ടികൾ പ്രകാശനം</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-text">മെയ് 2026+: മാസാന്ത സംഗീത സിരീസ് നിരന്തരം</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">🏠 വീടിലേയ്ക്ക് തിരികെ</a>
+                <a href="about.html" class="btn btn-secondary">📧 ഞങ്ങളെ സമ്പർക്കം ചെയ്യുക</a>
+            </div>
+
+            <div class="emoji-line">🎵 🎹 🎶 🎼</div>
+        </div>
+    </div>
+
+
+    <!-- ── SHARED FOOTER (injected by kutty-extras.js) ── -->
+    <div id="kt-footer"></div>
+
+
+    <!-- Shared hamburger + footer logic -->
+    <script src="kutty-extras.js" defer></script>
+
+</body>
+</html>

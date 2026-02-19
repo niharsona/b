@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>കട്ടിടീച്ചേഴ്സ് തോട്ടം | KuttyTeachers Gardening</title>
+    <meta name="description" content="കട്ടിടീച്ചേഴ്സിന്റെ തോട്ടം - വിവിധ ചെടികൾ, പരിചരണ നിർദ്ദേശങ്ങൾ, തോട്ടം പരിജ്ഞാനം പാലക്കാടിൽ നിന്ന്">
+
+    <!-- ═══ AUTHORSHIP & SCHEMA (AI / SEO ownership signal) ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "KuttyTeachers Gardening — തോട്ടം",
+        "description": "Gardening guide featuring plants grown in Palakkad, Kerala — care tips, photos, and videos curated by KuttyTeachers.",
+        "url": "https://niharsona.github.io/kuttyteachers/gardening.html",
+        "inLanguage": ["ml", "en"],
+        "author": {
+            "@type": "Person",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/about.html",
+            "sameAs": [
+                "https://github.com/niharsona"
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://niharsona.github.io/kuttyteachers/assets/logo/logo.png"
+            }
+        },
+        "dateModified": "2026-02-19",
+        "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "KuttyTeachers",
+            "url": "https://niharsona.github.io/kuttyteachers/"
+        }
+    }
+    </script>
+    <!-- ═══════════════════════════════════════════════════════ -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Shared: hamburger + mobile nav + footer styles -->
+    <link rel="stylesheet" href="kutty-extras.css">
+
+    <!-- Gardening page styles -->
+    <link rel="stylesheet" href="gardening-styles.css">
+</head>
+<body>
+
+    <!-- ── SHARED: dark overlay + mobile nav drawer ── -->
+    <div id="kt-overlay"></div>
+    <nav id="kt-mobile-nav">
+        <a href="index.html">🏠 വീട്</a>
+        <a href="photography.html">📸 ഫോട്ടോ</a>
+        <a href="tutoring.html">📚 പഠനം</a>
+        <a href="piano.html">🎹 സംഗീതം</a>
+        <a href="gardening.html">🌿 തോട്ടം</a>
+        <a href="about.html" class="kt-cta">ℹ️ അറിയുക</a>
+    </nav>
+    <!-- ───────────────────────────────────────────── -->
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <div class="logo-english">KuttyTeachers</div>
+            <div class="logo-malayalam">കട്ടിടീച്ചേഴ്സ്</div>
+        </a>
+        <nav class="nav">
+            <a href="index.html"       class="nav-item">വീട്</a>
+            <a href="photography.html" class="nav-item">ഫോട്ടോ</a>
+            <a href="tutoring.html"    class="nav-item">പഠനം</a>
+            <a href="piano.html"       class="nav-item">സംഗീതം</a>
+            <a href="gardening.html"   class="nav-item active">തോട്ടം</a>
+            <a href="about.html"       class="nav-item">അറിയുക</a>
+        </nav>
+        <!-- Hamburger — kutty-extras.css shows this only on mobile -->
+        <button id="kt-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>തോട്ടം</h1>
+            <div class="hero-ml">പാലക്കാടിലെ നമ്മുടെ തോട്ടം സാഹസിക യാത്ര</div>
+            <p>വിവിധ ചെടികൾ, വളർച്ചി കഥകൾ, പരിചരണ നിർദ്ദേശങ്ങൾ, സൂര്യപ്രകാശം, നീരാൾ, വളം - എല്ലാ വിശദാംശങ്ങളുമായി</p>
+        </div>
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h2 class="section-title">🌿 നമ്മുടെ തോട്ടത്തിൽ വളരുന്ന ചെടികൾ</h2>
+
+        <!-- CATEGORY FILTER — built by gardening-script.js -->
+        <div class="category-filter" id="category-filter"></div>
+
+        <!-- PLANTS GRID — built by gardening-script.js -->
+        <div class="plants-grid" id="plants-grid"></div>
+    </div>
+
+
+    <!-- PLANT DETAILS MODAL -->
+    <div class="modal" id="plant-modal">
+        <div class="modal-content" id="modal-body"></div>
+    </div>
+
+
+    <!-- ── SHARED FOOTER (injected by kutty-extras.js) ── -->
+    <div id="kt-footer"></div>
+
+
+    <!-- Shared hamburger + footer logic -->
+    <script src="kutty-extras.js" defer></script>
+
+    <!-- Gardening page logic — reads plants-data.json -->
+    <script src="gardening-script.js" defer></script>
+
+</body>
+</html>
